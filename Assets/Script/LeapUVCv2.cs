@@ -28,9 +28,9 @@ public class LeapUVCv2 : MonoBehaviour {
 
 		//データを取得 1x614400
 		cam.Read(cam_frame);
-		Debug.Log(cam_frame.Size());
+		//Debug.Log(cam_frame.Size());
 		//LとRの307200(640x640)x2に分ける
-		/*
+
 		cam_frame = cam_frame.Reshape(1, HEIGHT * WIDTH, 2);
 
 		//1列目は左データ　307200 x 1
@@ -47,7 +47,6 @@ public class LeapUVCv2 : MonoBehaviour {
         rightFrame = rightFrame.Reshape(1, HEIGHT, WIDTH);
 		//1つの配列にまとめる
 		LeftRightFrame = new Mat[2] {leftFrame, rightFrame};
-		*/
 	}
 
 	public void get(CaptureProperty param){
